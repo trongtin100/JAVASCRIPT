@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChuyenDoiTienTe</title>
+</head>
+<body>
+<form>
+
+  <h2>Order Form</h2>
+
+  <table border="1" width="">
+    <tr>
+      <th id="AMOUNT"><h7>amount</h7> </th>
+      <th id="FromCurrency">FromCurrency  </th>
+      <th id="ToCurrency">ToCurrency</th>
+    </tr>
+    <tr>
+      <th>
+        <select>
+          <option id="1">1</option>
+          <option id="2">2</option>
+        </select>
+      </th>
+      <th>
+        <select>
+          <option id="us1">US</option>
+          <option id="VND1">VND</option>
+        </select>
+      </th>
+      <th>
+        <select left>
+        <option id="US">US</option>
+        <option id="VND">VND</option>
+        </select>
+      </th>
+    </tr>
+  </table>
+  </br><button>Change</button>
+  <p id="display"></p>
+
+</form>
+<button type="button" onclick="myFunction()">KetQuaChuyenDoi</button>
+<script  src="myScript.js"></script>
+<script>
+  function change () {
+    var amount=document.getElementById("AMOUNT").value;
+    var FromCurrency=document.getElementById("FromCurrency").value;
+    var ToCurrency = document.getElementById("ToCurrency");
+    var KetQuaChuyenDoi = FromCurrency * ToCurrency * amount
+    document.write (("KetQuaChuyenDoi:" + KetQuaChuyenDoi));
+  }
+      if (FromCurrency==="VND" && ToCurrency==="VND") {
+        result = Number (amount);
+      }
+      if (FromCurrency==="VND" && ToCurrency==="US") {
+        result = Number (amount);
+  }
+      if (FromCurrency==="VND" && ToCurrency==="US") {
+          result = Number (amount)*23000;
+  }
+      if (FromCurrency==="USD" && ToCurrency==="VN") {
+            result = Number (amount)/23000;
+  }
+</script>
+</body>
+</html>
